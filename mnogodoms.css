@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --text: #3e3e3e;
+  --orange: #ff7813;
+  --orange-number: #e67829;
+  --orange-border: #ffb27b;
+  --benefit: #fbfaf9;
+  --line: #a49997;
+  --service: #fdf8f2;
+  --beige: #f1efed;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: var(--text);
+  margin: 0;
+  font-weight: 400;
+  max-width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header .main-header ul li:last-child {
+  margin-left: 20px;
+}
+.custom-shadow {
+  box-shadow: 0px 0px 40px 0px rgba(73, 73, 73, 0.25);
+}
+
+#type-of-visa details[open] summary svg rect:nth-child(2) {
+  display: none;
+}
+
+section.portugal-map {
+  .map-container {
+    .map-box {
+      svg:not(:root) {
+        overflow: hidden;
+      }
+
+      a {
+        background-color: transparent;
+      }
+
+      a,
+      a:hover,
+      a:active,
+      a:focus,
+      a:visited {
+        color: inherit;
+        -webkit-appearance: none;
+        text-decoration: none;
+        outline: none;
+      }
+
+      a.map-link polygon {
+        display: inline-block;
+        fill: #fac187;
+        stroke: #ffffff;
+        stroke-width: 0.17%;
+
+        &:hover {
+          stroke: #745240;
+          stroke-width: 3px;
+        }
+      }
+
+      a.map-link {
+        &.viana_do_castelo,
+        &.braga_municipality,
+        &.porto,
+        &.vila_real,
+        &.braganca {
+          polygon {
+            fill: #e3dec8;
+          }
+        }
+
+        &.santarem,
+        &.portalegre,
+        &.evora,
+        &.setubal,
+        &.beja {
+          polygon {
+            fill: #d98248;
+          }
+        }
+
+        &.lisbon {
+          polygon {
+            fill: #c9b99f;
+          }
+        }
+
+        &.algarve {
+          polygon {
+            fill: #f29821;
+          }
+        }
+      }
+
+      a.map-hover polygon {
+        fill: transparent;
+        stroke: none;
+        stroke-width: 0;
+        opacity: 0.75;
+      }
+
+      #tooltips {
+        position: absolute;
+        display: block;
+        z-index: 1000;
+      }
+
+      #tooltips .area-tooltip {
+        padding: 4px 8px;
+        border-radius: 4px;
+        background: #ffffff;
+        border: 1px solid #e0e1ec;
+        box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.05),
+          0px 3px 4px -3px rgba(0, 0, 0, 0.05);
+        user-select: none;
+        pointer-events: none;
+        display: none;
+        white-space: nowrap;
+      }
+
+      .area-tooltip {
+        text-transform: uppercase;
+      }
+
+      #gamap-cities .city-img-container {
+        width: 8px;
+        height: 8px;
+        -ms-transform: scale(0.4);
+        -webkit-transform: scale(0.4);
+        transform: scale(0.4);
+      }
+
+      #gamap-cities .ga-icon-dot {
+        position: relative;
+        top: -9.5px;
+        left: -9.5px;
+        width: 21px;
+        height: 21px;
+        font-size: 2em;
+        color: white;
+      }
+
+      .city-img-container .ga-icon-dot {
+        position: relative;
+        left: 6px;
+        font-size: 0.7em;
+        color: red;
+      }
+
+      [class^="ga-icon-"],
+      [class*=" ga-icon-"] {
+        font-family: "GaIcons" !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .ga-icon-dot:before {
+        content: "\25CB";
+      }
+
+      #gamap-cities .cities_label {
+        font-size: calc(0.5em + 0.68vw);
+        background-color: #f2f2f2;
+        background-color: rgba(242, 242, 242, 0.6);
+        padding: 0 3px 0 3px;
+        z-index: 100;
+        cursor: default;
+      }
+
+      #gamap-cities .cities_label.hover_label:hover {
+        background-color: #f2f2f2;
+        background-color: rgba(242, 242, 242, 0.9);
+        cursor: pointer;
+      }
+    }
+
+    .selected-region .highlighted-text span::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 4px;
+      height: 9px;
+      /* Adjust thickness of the background underline */
+      background-color: rgba(250, 193, 135, 0.8);
+      /* Light orange background */
+      z-index: -1;
+      /* Places it behind text */
+    }
+  }
+}
+
+section.contact-us input,
+section.contact-us textarea {
+  font-family: "Montserrat";
+  font-size: 16px;
+  color: var(--text);
+  border-radius: 4px;
+  background-color: var(--beige);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.5px;
+  padding: 14px 17px;
+  border-color: transparent;
+}
+
+footer i {
+  margin-top: 28px;
+  font-family: Monotype Corsiva;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 26.93px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.container,
+section {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+/* Mobile*/
+@media (max-width: 600px) {
+  #bigMapContainer {
+    position: relative;
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  header {
+    ul.show {
+      display: flex;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
